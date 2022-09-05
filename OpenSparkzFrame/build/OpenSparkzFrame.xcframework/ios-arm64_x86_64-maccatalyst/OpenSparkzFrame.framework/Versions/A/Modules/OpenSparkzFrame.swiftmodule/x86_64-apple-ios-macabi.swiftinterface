@@ -1,0 +1,177 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target x86_64-apple-ios15.2-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenSparkzFrame
+import Foundation
+@_exported import OpenSparkzFrame
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+@available(iOS 9.0, *)
+public enum ValidateType : Swift.String {
+  case success
+  case error
+  case ready
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 9.0, *)
+@IBDesignable @_Concurrency.MainActor(unsafe) open class ValidationTextField : UIKit.UITextField {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isShowTitle: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isUseTitle: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var titleText: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var titleFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var titleColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var errorColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var errorFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var errorMessage: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var disabledColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var placeholder: Swift.String? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var leftImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var validCondition: ((Swift.String) -> Swift.Bool)?
+  @_Concurrency.MainActor(unsafe) open var isValid: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var successImage: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) open var errorImage: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) open var statusImageView: UIKit.UIImageView {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var validateStatus: OpenSparkzFrame.ValidateType {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func initValidationTextField()
+  @objc @_Concurrency.MainActor(unsafe) public func editingChanged()
+  @_Concurrency.MainActor(unsafe) public func checkValidation()
+  @_Concurrency.MainActor(unsafe) public func createTitleLabel()
+  @_Concurrency.MainActor(unsafe) public func createLineView()
+  @_Concurrency.MainActor(unsafe) public func createErrorLabel()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func placeholderRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func leftViewRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @objc override dynamic open func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func closestPosition(to point: CoreGraphics.CGPoint) -> UIKit.UITextPosition?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ApiHelper : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  @objc deinit
+}
+public struct MESSAGE {
+}
+public protocol CardViewDelegate : AnyObject {
+  func resultStatus(result: [Swift.String : Any]?)
+  func networkStatus(status: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11.0, *)
+@_Concurrency.MainActor(unsafe) public class CardView : UIKit.UIView, UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var cardDeleagte: OpenSparkzFrame.CardViewDelegate?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var enableDefaultLoader: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var configureGetAddCardEndPoint: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var configureRegisterCardEndPoint: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var activeBorderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cardBackgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var defaultBorderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var defaultEditTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var defaultTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var errorTextColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var fontFamily: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cardNumberErrorMessage: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cardExpiryErrorMessage: Swift.String {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override required dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func registerCard(accessToken: Swift.String)
+  @objc deinit
+}
+@available(iOS 9.0, *)
+extension OpenSparkzFrame.ValidateType : Swift.Equatable {}
+@available(iOS 9.0, *)
+extension OpenSparkzFrame.ValidateType : Swift.Hashable {}
+@available(iOS 9.0, *)
+extension OpenSparkzFrame.ValidateType : Swift.RawRepresentable {}

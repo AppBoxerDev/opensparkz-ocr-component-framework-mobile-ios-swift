@@ -1,0 +1,11 @@
+framework module OpenSparkzFrame {
+  umbrella header "OpenSparkzFrame.h"
+
+  export *
+  module * { export * }
+}
+
+module OpenSparkzFrame.Swift {
+    header "OpenSparkzFrame-Swift.h"
+    requires objc
+}
