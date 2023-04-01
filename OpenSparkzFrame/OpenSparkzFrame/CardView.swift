@@ -198,7 +198,7 @@ public class CardView: UIView, UITextFieldDelegate {
         lblExpiry.textColor = .darkGray
         
         
-        expDateView = ValidationTextField(frame: CGRect(x: 20.0, y: lblExpiry.frame.size.height + lblExpiry.frame.origin.y, width: self.cardBannerView.frame.size.width - 40.0, height: 40.0))
+        expDateView = UIView(frame: CGRect(x: 20.0, y: lblExpiry.frame.size.height + lblExpiry.frame.origin.y, width: self.cardBannerView.frame.size.width - 40.0, height: 40.0))
         textFieldExpiry = ValidationTextField(frame: CGRect(x: 0, y: 0, width: self.cardBannerView.frame.size.width - 40.0, height: 40.0))
         textFieldExpiry.layer.borderColor = defaultBorderColor.cgColor
         textFieldExpiry.titleColor = .clear
